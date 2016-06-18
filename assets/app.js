@@ -70,7 +70,10 @@ $(function () {
       let DOMString = `<div class="done">You did it! Your time: ${Timer.EndTiming()}s</div><button type="button" name="button" class="btn new" onClick="window.location.reload();">New Game</button>`;
 
       $('html').addClass('doneBody');
-      $('main').html(DOMString);
+			$('main').fadeOut(100);
+      setTimeout(function () {
+        $('main').html(DOMString).fadeIn();
+      }, 200);
     }
 
   });
