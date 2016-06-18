@@ -67,7 +67,7 @@ $(function () {
 
     if (clickVal === 26) {
       clickVal++;
-      let DOMString = `<div class="done">Geschafft! Zeit: ${Timer.EndTiming()}s</div><button type="button" name="button" class="btn new" onClick="window.location.reload();">Neu</button>`;
+      let DOMString = `<div class="done">You did it! Your time: ${Timer.EndTiming()}s</div><button type="button" name="button" class="btn new" onClick="window.location.reload();">New Game</button>`;
 
       $('html').addClass('doneBody');
       $('main').html(DOMString);
