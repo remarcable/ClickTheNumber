@@ -28,9 +28,9 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 25px;
   color: #fff;
   background-color: #fcbe32;
-  font-size: 25px;
   transition: all .2s;
 }
 .btn {
@@ -38,20 +38,23 @@ main {
   border: 0;
   text-transform: uppercase;
   color: #fff;
-  background-color: #fcbe32;
+  background-color: #e8b748;
+  box-shadow: -9px 21px 70px -10px rgba(0,0,0,0.20);
   transition: all .2s;
 }
 .btn.new {
   padding: 40px;
+  transform: scale3d(1.1, 1.1, 1);
+  background-color: #fcbe32;
 }
 .btn:focus {
   outline: 0;
 }
-.btn:hover {
-  background-color: #f9be39
-}
 .btn:active {
-  transform: scale3d(1.1, 1.1, 1);
+  transform: scale3d(1, 1, 1)
+}
+.btn:hover {
+  background-color: #fcbe32;
 }
 .active {
   background-color: #3b8686;
