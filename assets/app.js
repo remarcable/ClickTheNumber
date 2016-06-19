@@ -71,8 +71,48 @@ $(function () {
 
       $('html').addClass('doneBody');
 			$('main').fadeOut(100);
+
       setTimeout(function () {
         $('main').html(DOMString).fadeIn();
+
+				$.getJSON('./leaderboard.json', function(data) {
+					let TableFields = [];
+					let DOMString = '';
+					let sortedLeaderboard = _.sortBy(data, 'time');
+
+					if (sortedLeaderboard.length >= 10) {
+						sortedLeaderboard = sortedLeaderboard.slice(0, 10);
+					}
+
+					_.each(sortedLeaderboard, function (e, i) {
+						let name = e.name;
+
+						if (e.github !== "") {
+							name = `<a ref="external" target="_blank" href="//github.com/${e.github}">${e.name}</a>`
+						}
+
+						TableFields.push(`
+							<tr>
+								<td class="index">
+									${ i + 1}.
+								</td>
+								<td>
+									${ name }
+								</td>
+								<td>
+									${e.time}s
+								</td>
+							</tr>
+							`);
+
+					});
+
+					for (var i = 0; i < TableFields.length; i++) {
+						DOMString += TableFields[i];
+					}
+
+					$('main').append(`<table class="leaderboard">${ DOMString }</table>`);
+				});
       }, 200);
     }
 
