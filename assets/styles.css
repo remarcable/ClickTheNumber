@@ -16,6 +16,13 @@ body {
   justify-content: center;
   align-items: center;
 }
+.github {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-weight: 300;
+  font-size: 12px;
+}
 main {
   width: 600px;
   display: flex;

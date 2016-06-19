@@ -15,7 +15,7 @@ Click on the boxes with the numbers from 1 to 25 in ascending order.
 ```
 
 ## Leaderboard
-Create a pull request to be included in this awesome leaderboard!
+Create a pull request to be included in this awesome leaderboard! Please update Readme.md and Leaderboard.json. I love to hear from you!
 
 | Name                                      | Time    |
 |-------------------------------------------|---------|
