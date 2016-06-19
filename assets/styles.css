@@ -24,11 +24,11 @@ body {
   font-size: 12px;
 }
 main {
-  width: 600px;
+  width: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 a {

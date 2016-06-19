@@ -54,6 +54,7 @@ $(function () {
 
   $('.btn').on('click', function () {
     Timer.StartTiming();
+		$('main').css('flex-direction', 'row');
     generateField();
   });
 
