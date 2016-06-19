@@ -102,7 +102,8 @@ $(function () {
 														DOMString += TableFields[i];
 												}
 
-												$('main').append('<table class="leaderboard">' + DOMString + '</table>');
+												$('main').append('<table class="leaderboard" style="opacity: 0">' + DOMString + '</table>');
+												$('.leaderboard').css('opacity', 1);
 										});
 								}, 200);
 						})();
