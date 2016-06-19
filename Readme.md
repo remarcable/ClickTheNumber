@@ -19,7 +19,7 @@ Create a pull request to be included in this awesome leaderboard!
 
 | Name                                      | Time    |
 |-------------------------------------------|---------|
-| [Marc](https://github.com/lightningboss/) | 19,331s |
+| Paul                                      | 12.329s |
+| [Marc](https://github.com/lightningboss/) | 19.331s |
 | [Marc](https://github.com/lightningboss/) | 28.791s |
-| Paul                                      |         |
 | Jonas                                     |         |
