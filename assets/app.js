@@ -114,7 +114,9 @@ $(function () {
 					}
 
 					$('main').append(`<table class="leaderboard" style="opacity: 0">${ DOMString }</table>`);
-					$('.leaderboard').css('opacity', 1);
+					setTimeout(function () {
+						$('.leaderboard').css('opacity', 1);
+					}, 200);
 				});
       }, 200);
     }
