@@ -69,7 +69,8 @@ $(function () {
 				if (clickVal === 26) {
 						(function () {
 								clickVal++;
-								var DOMString = '<div class="done">You did it! Your time: ' + Timer.EndTiming() + 's</div><button type="button" name="button" class="btn new" onClick="window.location.reload();">New Game</button>';
+								var gameDoneMessages = ['You did it!', 'Alright!', 'Awesome!', 'What the fuck.', 'Amazing!', 'Did you beat the boss?', 'This horse is amazing!'];
+								var DOMString = '<div class="done">' + gameDoneMessages[_.random(0, gameDoneMessages.length)] + ' Your time: ' + Timer.EndTiming() + 's</div><button type="button" name="button" class="btn new" onClick="window.location.reload();">New Game</button>';
 
 								$('html').addClass('doneBody');
 								$('main').fadeOut(100);
