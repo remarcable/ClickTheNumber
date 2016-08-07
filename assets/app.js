@@ -58,7 +58,7 @@ $(function () {
     generateField();
   });
 
-  $('main').on('click', function (e) {
+  $('main').on('mousedown', function (e) {
     let eId = +e.target.id;
 
     if (eId === clickVal) {
