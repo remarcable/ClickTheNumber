@@ -1,0 +1,19 @@
+.number {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #fcbe32;
+  border: 0;
+  outline: 0;
+  transition: all .2s;
+}
+
+.active {
+  background-color: #3b8686;
+}
