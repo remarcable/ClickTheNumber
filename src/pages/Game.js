@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Number from '../components/Number';
+import NumberBox from '../components/NumberBox';
 import Timer from '../lib/Timer';
 
 export default class Game extends Component {
@@ -16,8 +16,20 @@ export default class Game extends Component {
 
     return (
       <main>
-        { randomNumbers.map(n => <Number n={n} key={n} currentNumber={currentNumber} handleGameClick={handleGameClick} />) }
+        { randomNumbers.map(n =>
+          <NumberBox
+            n={n}
+            key={n}
+            currentNumber={currentNumber}
+            handleGameClick={handleGameClick}
+          />) }
       </main>
     );
   }
 }
+
+Game.propTypes = {
+  randomNumbers: React.PropTypes.array.isRequired,
+  currentNumber: React.PropTypes.number.isRequired,
+  handleGameClick: React.PropTypes.func.isRequired,
+};

@@ -1,0 +1,16 @@
+.github {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: underline;
+}
+a:visited {
+  color: #fff;
+}

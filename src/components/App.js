@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import Introduction from '../pages/Introduction';
-import Game from '../pages/Game';
-import Score from '../pages/Score';
+import Footer from '../components/Footer';
+import PageRenderer from '../pages/PageRenderer';
 import randomRange from '../lib/RandomRange';
 import './App.css';
 
@@ -18,11 +17,11 @@ class App extends Component {
     this.showIntroduction = this.showIntroduction.bind(this);
   }
 
-  handleGameClick(n) {
+  handleGameClick(clickedNumber) {
     const { currentNumber } = this.state;
     const nextNumber = currentNumber + 1;
-    if (n === nextNumber) {
-      this.setState({ currentNumber: currentNumber + 1 })
+    if (clickedNumber === nextNumber) {
+      this.setState({ currentNumber: nextNumber });
     }
 
     if (nextNumber === 25) {
@@ -40,36 +39,18 @@ class App extends Component {
   }
 
   render() {
-    const currentPage = () => {
-      const state = this.state;
-      let page;
-
-      switch (state.page) {
-      case 'Game':
-        page = (
-          <Game
-            currentNumber={state.currentNumber}
-            randomNumbers={state.randomNumbers}
-            handleGameClick={this.handleGameClick}
-          />
-        );
-        break;
-      case 'Score':
-        page = <Score showIntroduction={this.showIntroduction} />;
-        break;
-      default: // = case 'Introduction'
-        page = <Introduction startGame={this.startGame} />;
-      }
-
-      return page;
-    };
+    const showDone = this.state.page === 'Score' ? 'doneBody' : '';
+    const className = `App ${showDone}`;
 
     return (
-      <div className="App">
-        <header className="github">
-          Made with ♡ by <a rel="noopener noreferrer" target="_blank" href="https://github.com/lightningboss/ClickTheNumber">LightningBoss</a>
-        </header>
-        { currentPage() }
+      <div className={className}>
+        <Footer />
+        <PageRenderer
+          currentState={this.state}
+          handleGameClick={this.handleGameClick}
+          startGame={this.startGame}
+          showIntroduction={this.showIntroduction}
+        />
       </div>
     );
   }
