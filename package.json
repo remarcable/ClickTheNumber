@@ -2,6 +2,7 @@
   "name": "Zahlenklicken",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://me.marcnitzsche.de/ClickTheNumber",
   "devDependencies": {
     "react-scripts": "0.7.0"
   },
