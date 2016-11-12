@@ -1,27 +1,15 @@
-### OSX ###
-*.DS_Store
-.AppleDouble
-.LSOverride
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# Icon must end with two 
-Icon
+# dependencies
+node_modules
 
+# testing
+coverage
 
-# Thumbnails
-._*
+# production
+build
 
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+# misc
+.DS_Store
+.env
+npm-debug.log
