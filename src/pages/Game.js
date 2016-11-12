@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NumberBox from '../components/NumberBox';
+import NumberBox from '../components/NumberBox/NumberBox';
 import Timer from '../lib/Timer';
 
 export default class Game extends Component {

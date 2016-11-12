@@ -1,6 +1,6 @@
 import React from 'react';
 import random from 'just-random';
-import Button from '../components/Button';
+import Button from '../components/Button/Button';
 import Timer from '../lib/Timer';
 import './Score.css';
 

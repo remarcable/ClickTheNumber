@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer/Footer';
 import PageRenderer from '../pages/PageRenderer';
 import randomRange from '../lib/RandomRange';
 import './App.css';
