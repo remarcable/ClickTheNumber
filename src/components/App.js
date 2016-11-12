@@ -9,21 +9,34 @@ class App extends Component {
   constructor(props, state) {
     super(props, state);
 
-    const randomNumbers = randomRange(25);
     this.state = {
-      page: 'Game',
-      currentNumber: 0,
-      randomNumbers,
+      page: 'Introduction',
     };
 
     this.handleGameClick = this.handleGameClick.bind(this);
+    this.startGame = this.startGame.bind(this);
+    this.showIntroduction = this.showIntroduction.bind(this);
   }
 
   handleGameClick(n) {
     const { currentNumber } = this.state;
-    if (n === currentNumber + 1) {
+    const nextNumber = currentNumber + 1;
+    if (n === nextNumber) {
       this.setState({ currentNumber: currentNumber + 1 })
     }
+
+    if (nextNumber === 25) {
+      this.setState({ page: 'Score' });
+    }
+  }
+
+  startGame() {
+    const randomNumbers = randomRange(25);
+    this.setState({ page: 'Game', currentNumber: 0, randomNumbers });
+  }
+
+  showIntroduction() {
+    this.setState({ page: 'Introduction' });
   }
 
   render() {
@@ -32,9 +45,6 @@ class App extends Component {
       let page;
 
       switch (state.page) {
-      case 'Introduction':
-        page = <Introduction />;
-        break;
       case 'Game':
         page = (
           <Game
@@ -45,10 +55,10 @@ class App extends Component {
         );
         break;
       case 'Score':
-        page = <Score />;
+        page = <Score showIntroduction={this.showIntroduction} />;
         break;
-      default:
-        page = <Introduction />;
+      default: // = case 'Introduction'
+        page = <Introduction startGame={this.startGame} />;
       }
 
       return page;

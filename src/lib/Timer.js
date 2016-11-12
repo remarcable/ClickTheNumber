@@ -1,4 +1,4 @@
-export default class Timer {
+class Timer {
   constructor() {
     this.startTime = 0;
     this.endTime = 0;
@@ -16,3 +16,5 @@ export default class Timer {
     return this.endTime - this.startTime;
   }
 }
+
+export default new Timer();

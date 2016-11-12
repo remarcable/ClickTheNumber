@@ -16,11 +16,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-.App {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .github {
   position: absolute;
@@ -36,6 +31,11 @@ main {
   align-items: center;
   flex-wrap: wrap;
 }
+
+.introduction {
+  flex-direction: column;
+}
+
 a {
   color: #fff;
   text-decoration: underline;
