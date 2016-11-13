@@ -17,3 +17,13 @@
 .active {
   background-color: #3b8686;
 }
+
+@media only screen and (max-width : 750px) {
+  .number {
+    margin: 2px;
+    width: 65px;
+    height: 65px;
+    font-size: 20px;
+    flex-grow: 1;
+  }
+}
