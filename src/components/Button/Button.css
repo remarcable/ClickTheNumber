@@ -14,11 +14,22 @@
   background-color: #fcbe32;
 }
 
+@media only screen and (max-width : 750px) {
+  .btn.lifted {
+    padding: 30px;
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
 .btn.small {
   padding: 15px;
   font-size: 15px;
   margin-top: 15px;
   background-color: rgba(35, 50, 60, 0.5);
+}
+
+.btn.small:hover {
+  background-color: rgba(35, 50, 60, 0.75);
 }
 
 .btn:focus {

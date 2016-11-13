@@ -7,3 +7,9 @@
   color: #111;
   background-color: #e1eef6;
 }
+
+@media only screen and (max-width : 750px) {
+  .done {
+    padding: 20px;
+  }
+}
