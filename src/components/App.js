@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Footer from '../components/Footer/Footer';
 import PageRenderer from '../pages/PageRenderer';
+import goFullscreen from '../lib/goFullscreen';
 import randomRange from '../lib/RandomRange';
 import './App.css';
 
@@ -50,6 +51,7 @@ class App extends Component {
           handleGameClick={this.handleGameClick}
           startGame={this.startGame}
           showIntroduction={this.showIntroduction}
+          goFullscreen={goFullscreen}
         />
       </div>
     );

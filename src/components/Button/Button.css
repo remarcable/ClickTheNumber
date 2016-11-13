@@ -13,6 +13,14 @@
   transform: scale3d(1.1, 1.1, 1);
   background-color: #fcbe32;
 }
+
+.btn.small {
+  padding: 15px;
+  font-size: 15px;
+  margin-top: 15px;
+  background-color: rgba(35, 50, 60, 0.5);
+}
+
 .btn:focus {
   outline: 0;
 }

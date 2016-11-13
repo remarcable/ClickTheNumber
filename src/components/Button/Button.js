@@ -3,7 +3,8 @@ import './Button.css';
 
 export default function Button(props) {
   const showLifted = props.isLifted ? 'lifted' : '';
-  const className = `btn ${showLifted}`;
+  const showSmall = props.isSmall ? 'small' : '';
+  const className = `btn ${showLifted} ${showSmall}`;
   return (
     <button
       type="button"
@@ -16,6 +17,7 @@ export default function Button(props) {
 
 Button.propTypes = {
   isLifted: React.PropTypes.bool,
+  isSmall: React.PropTypes.bool,
   onClick: React.PropTypes.func,
   children: React.PropTypes.node,
 };

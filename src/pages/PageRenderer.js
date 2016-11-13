@@ -6,7 +6,8 @@ import Score from '../pages/Score';
 export default function PageRenderer({ currentState,
   handleGameClick,
   showIntroduction,
-  startGame }) {
+  startGame,
+  goFullscreen }) {
   let page;
 
   switch (currentState.page) {
@@ -23,7 +24,7 @@ export default function PageRenderer({ currentState,
     page = <Score showIntroduction={showIntroduction} />;
     break;
   default: // = case 'Introduction'
-    page = <Introduction startGame={startGame} />;
+    page = <Introduction startGame={startGame} goFullscreen={goFullscreen} />;
   }
 
   return page;
