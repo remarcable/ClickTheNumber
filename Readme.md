@@ -1,4 +1,4 @@
-# [Click The Number!](http://me.marcnitzsche.de/ClickTheNumber/)
+# [Click The Number!](http://marcnitzsche.de/ClickTheNumber/)
 Test your reaction time with this epic and amazing game.
 
 +-+
