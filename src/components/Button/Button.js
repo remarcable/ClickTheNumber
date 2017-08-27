@@ -1,23 +1,26 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+
 import './Button.css';
 
-export default function Button(props) {
-  const showLifted = props.isLifted ? 'lifted' : '';
-  const showSmall = props.isSmall ? 'small' : '';
-  const className = `btn ${showLifted} ${showSmall}`;
-  return (
-    <button
-      type="button"
-      className={className}
-      onClick={props.onClick}
-    >{props.children}
-    </button>
-  );
-}
-
-Button.propTypes = {
-  isLifted: React.PropTypes.bool,
-  isSmall: React.PropTypes.bool,
-  onClick: React.PropTypes.func,
-  children: React.PropTypes.node,
+const propTypes = {
+  isLifted: PropTypes.bool,
+  isSmall: PropTypes.bool,
+  onClick: PropTypes.func,
+  children: PropTypes.node,
 };
+
+const Button = ({ isLifted, isSmall, children, onClick }) => (
+  <button
+    type="button"
+    className={classnames('btn', { lifted: isLifted, small: isSmall })}
+    onClick={onClick}
+  >
+    {children}
+  </button>
+  );
+
+Button.propTypes = propTypes;
+
+export default Button;

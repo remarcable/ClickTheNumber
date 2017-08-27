@@ -1,28 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+
 import './NumberBox.css';
 
-export default class NumberBox extends Component {
-  constructor() {
-    super();
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-    const clickedNumber = this.props.n;
-    this.props.handleGameClick(clickedNumber);
-  }
-
-  render() {
-    const { n, currentNumber } = this.props;
-    const isClicked = currentNumber >= n;
-    const className = `number ${isClicked ? 'active' : ''}`;
-
-    return (<button className={className} onMouseDown={this.handleClick}>{n}</button>);
-  }
-}
-
-NumberBox.propTypes = {
-  n: React.PropTypes.number.isRequired,
-  currentNumber: React.PropTypes.number.isRequired,
-  handleGameClick: React.PropTypes.func.isRequired,
+const propTypes = {
+  n: PropTypes.number.isRequired,
+  currentNumber: PropTypes.number.isRequired,
+  handleGameClick: PropTypes.func.isRequired,
 };
+
+const NumberBox = ({ n, currentNumber, handleGameClick }) => (
+  <button
+    className={classnames('number', { active: currentNumber >= n })}
+    onMouseDown={() => handleGameClick(n)}
+  >
+    {n}
+  </button>
+);
+
+NumberBox.propTypes = propTypes;
+
+export default NumberBox;

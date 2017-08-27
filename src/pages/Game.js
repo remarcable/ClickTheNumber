@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
-import NumberBox from '../components/NumberBox/NumberBox';
+import PropTypes from 'prop-types';
+
 import Timer from '../lib/Timer';
+import NumberBox from '../components/NumberBox/NumberBox';
+
+const propTypes = {
+  randomNumbers: PropTypes.array.isRequired,
+  currentNumber: PropTypes.number.isRequired,
+  handleGameClick: PropTypes.func.isRequired,
+};
 
 export default class Game extends Component {
   componentDidMount() {
@@ -28,8 +36,4 @@ export default class Game extends Component {
   }
 }
 
-Game.propTypes = {
-  randomNumbers: React.PropTypes.array.isRequired,
-  currentNumber: React.PropTypes.number.isRequired,
-  handleGameClick: React.PropTypes.func.isRequired,
-};
+Game.propTypes = propTypes;

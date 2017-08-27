@@ -1,31 +1,47 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import Introduction from '../pages/Introduction';
 import Game from '../pages/Game';
 import Score from '../pages/Score';
 
-export default function PageRenderer({ currentState,
+const propTypes = {
+  currentState: PropTypes.shape({
+    page: PropTypes.string.isRequired,
+    currentNumber: PropTypes.number,
+    randomNumbers: PropTypes.arrayOf(PropTypes.number.isRequired),
+  }).isRequired,
+  handleGameClick: PropTypes.func.isRequired,
+  showIntroduction: PropTypes.func.isRequired,
+  startGame: PropTypes.func.isRequired,
+  goFullscreen: PropTypes.func.isRequired,
+};
+
+const PageRenderer = ({
+  currentState: { page, currentNumber, randomNumbers },
   handleGameClick,
   showIntroduction,
   startGame,
-  goFullscreen }) {
-  let page;
-
-  switch (currentState.page) {
-  case 'Game':
-    page = (
+  goFullscreen,
+}) => {
+  if (page === 'Game') {
+    return (
       <Game
-        currentNumber={currentState.currentNumber}
-        randomNumbers={currentState.randomNumbers}
+        currentNumber={currentNumber}
+        randomNumbers={randomNumbers}
         handleGameClick={handleGameClick}
       />
     );
-    break;
-  case 'Score':
-    page = <Score showIntroduction={showIntroduction} />;
-    break;
-  default: // = case 'Introduction'
-    page = <Introduction startGame={startGame} goFullscreen={goFullscreen} />;
   }
 
-  return page;
+  if (page === 'Score') {
+    return <Score showIntroduction={showIntroduction} />;
+  }
+
+  // => page === 'Introduction'
+  return <Introduction startGame={startGame} goFullscreen={goFullscreen} />;
 }
+
+PageRenderer.propTypes = propTypes;
+
+export default PageRenderer;
