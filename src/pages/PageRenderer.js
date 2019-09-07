@@ -1,20 +1,20 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import Introduction from '../pages/Introduction';
-import Game from '../pages/Game';
-import Score from '../pages/Score';
+import Introduction from "../pages/Introduction";
+import Game from "../pages/Game";
+import Score from "../pages/Score";
 
 const propTypes = {
   currentState: PropTypes.shape({
     page: PropTypes.string.isRequired,
     currentNumber: PropTypes.number,
-    randomNumbers: PropTypes.arrayOf(PropTypes.number.isRequired),
+    randomNumbers: PropTypes.arrayOf(PropTypes.number.isRequired)
   }).isRequired,
   handleGameClick: PropTypes.func.isRequired,
   showIntroduction: PropTypes.func.isRequired,
   startGame: PropTypes.func.isRequired,
-  goFullscreen: PropTypes.func.isRequired,
+  goFullscreen: PropTypes.func.isRequired
 };
 
 const PageRenderer = ({
@@ -22,9 +22,9 @@ const PageRenderer = ({
   handleGameClick,
   showIntroduction,
   startGame,
-  goFullscreen,
+  goFullscreen
 }) => {
-  if (page === 'Game') {
+  if (page === "Game") {
     return (
       <Game
         currentNumber={currentNumber}
@@ -34,13 +34,13 @@ const PageRenderer = ({
     );
   }
 
-  if (page === 'Score') {
+  if (page === "Score") {
     return <Score showIntroduction={showIntroduction} />;
   }
 
   // => page === 'Introduction'
   return <Introduction startGame={startGame} goFullscreen={goFullscreen} />;
-}
+};
 
 PageRenderer.propTypes = propTypes;
 

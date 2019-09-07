@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import random from 'just-random';
+import React from "react";
+import PropTypes from "prop-types";
+import random from "just-random";
 
-import Button from '../components/Button/Button';
-import Timer from '../lib/Timer';
+import Button from "../components/Button/Button";
+import Timer from "../lib/Timer";
 
-import './Score.css';
+import "./Score.css";
 
 const propTypes = {
-  showIntroduction: PropTypes.func,
+  showIntroduction: PropTypes.func
 };
 
 const Score = ({ showIntroduction }) => {
@@ -17,21 +17,23 @@ const Score = ({ showIntroduction }) => {
       <div className="done">
         {random(gameDoneMessages)} Your time: {getElapsedSeconds(Timer)}s
       </div>
-      <Button onClick={showIntroduction} isLifted>New Game</Button>
+      <Button onClick={showIntroduction} isLifted>
+        New Game
+      </Button>
     </main>
   );
-}
+};
 
 Score.propTypes = propTypes;
 
 const gameDoneMessages = [
-  'You did it!',
-  'Alright!',
-  'Awesome!',
-  'What the fuck.',
-  'Amazing!',
-  'Did you beat the boss?',
-  'This horse is amazing!',
+  "You did it!",
+  "Alright!",
+  "Awesome!",
+  "What the fuck.",
+  "Amazing!",
+  "Did you beat the boss?",
+  "This horse is amazing!"
 ];
 
 function getElapsedSeconds(Timer) {
