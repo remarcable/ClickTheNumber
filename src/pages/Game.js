@@ -7,7 +7,8 @@ import NumberBox from "../components/NumberBox/NumberBox";
 const propTypes = {
   randomNumbers: PropTypes.array.isRequired,
   currentNumber: PropTypes.number.isRequired,
-  handleGameClick: PropTypes.func.isRequired
+  handleGameClick: PropTypes.func.isRequired,
+  updateElapsedTime: PropTypes.func.isRequired
 };
 
 export default class Game extends Component {
@@ -17,6 +18,7 @@ export default class Game extends Component {
 
   componentWillUnmount() {
     Timer.stop();
+    this.props.updateElapsedTime(Timer.getElapsed());
   }
 
   render() {

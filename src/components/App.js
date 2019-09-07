@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import classnames from "classnames";
 
+import { pages } from "../pages/pages";
 import Footer from "../components/Footer/Footer";
 import PageRenderer from "../pages/PageRenderer";
 import goFullscreen from "../lib/goFullscreen";
@@ -11,7 +12,7 @@ import "./App.css";
 const NUMBER_BOX_COUNT = 25;
 
 class App extends Component {
-  state = { page: "Introduction" };
+  state = { page: pages.INTRODUCTION, elapsedTime: 0 };
   handleGameClick = clickedNumber => {
     const { currentNumber } = this.state;
     const nextNumber = currentNumber + 1;
@@ -20,22 +21,26 @@ class App extends Component {
     }
 
     if (nextNumber === NUMBER_BOX_COUNT) {
-      this.setState({ page: "Score" });
+      this.setState({ page: pages.SCORE });
     }
   };
 
   startGame = () => {
     const randomNumbers = randomRange(NUMBER_BOX_COUNT);
-    this.setState({ page: "Game", currentNumber: 0, randomNumbers });
+    this.setState({ page: pages.GAME, currentNumber: 0, randomNumbers });
   };
 
   showIntroduction = () => {
-    this.setState({ page: "Introduction" });
+    this.setState({ page: pages.INTRODUCTION });
+  };
+
+  updateElapsedTime = elapsedTime => {
+    this.setState({ elapsedTime });
   };
 
   render() {
     return (
-      <div className={classnames("App", { doneBody: this.state.page === "Score" })}>
+      <div className={classnames("App", { doneBody: this.state.page === pages.SCORE })}>
         <Footer />
         <PageRenderer
           currentState={this.state}
@@ -43,6 +48,7 @@ class App extends Component {
           startGame={this.startGame}
           showIntroduction={this.showIntroduction}
           goFullscreen={goFullscreen}
+          updateElapsedTime={this.updateElapsedTime}
         />
       </div>
     );
