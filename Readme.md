@@ -20,6 +20,7 @@ Create a pull request to be included in this awesome leaderboard! Please update 
 | Name                                      | Time    |
 |-------------------------------------------|---------|
 | Paul                                      | 12.329s |
-| [Marc](https://github.com/lightningboss/) | 19.331s |
-| [Marc](https://github.com/lightningboss/) | 28.791s |
+| [Janek](https://github.com/janek/)        | 14.626s |
+| [Marc](https://github.com/remarcable/)    | 19.331s |
+| [Marc](https://github.com/remarcable/)    | 28.791s |
 | Jonas                                     |         |
