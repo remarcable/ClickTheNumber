@@ -6,6 +6,7 @@
   background-color: #e8b748;
   box-shadow: -9px 21px 70px -10px rgba(0, 0, 0, 0.2);
   transition: all 0.2s;
+  cursor: pointer;
 }
 
 .btn.lifted {
@@ -19,17 +20,6 @@
     padding: 30px;
     transform: scale3d(1.1, 1.1, 1);
   }
-}
-
-.btn.small {
-  padding: 15px;
-  font-size: 15px;
-  margin-top: 15px;
-  background-color: rgba(35, 50, 60, 0.5);
-}
-
-.btn.small:hover {
-  background-color: rgba(35, 50, 60, 0.75);
 }
 
 .btn:focus {

@@ -4,10 +4,10 @@ import classnames from "classnames";
 import { pages } from "../pages/pages";
 import Footer from "../components/Footer/Footer";
 import PageRenderer from "../pages/PageRenderer";
-import goFullscreen from "../lib/goFullscreen";
 import randomRange from "../lib/RandomRange";
 
 import "./App.css";
+import FullscreenButton from "../FullscreenButton";
 
 const NUMBER_BOX_COUNT = 25;
 
@@ -41,13 +41,13 @@ class App extends Component {
   render() {
     return (
       <div className={classnames("App", { doneBody: this.state.page === pages.SCORE })}>
+        <FullscreenButton />
         <Footer />
         <PageRenderer
           currentState={this.state}
           handleGameClick={this.handleGameClick}
           startGame={this.startGame}
           showIntroduction={this.showIntroduction}
-          goFullscreen={goFullscreen}
           updateElapsedTime={this.updateElapsedTime}
         />
       </div>

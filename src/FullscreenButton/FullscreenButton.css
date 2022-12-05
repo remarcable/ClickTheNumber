@@ -1,0 +1,12 @@
+.fullscreen-button {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  color: #fff;
+
+  position: absolute;
+  top: 00px;
+  right: 00px;
+  cursor: pointer;
+  transform: scale(0.8);
+}

@@ -16,7 +16,6 @@ const propTypes = {
   handleGameClick: PropTypes.func.isRequired,
   showIntroduction: PropTypes.func.isRequired,
   startGame: PropTypes.func.isRequired,
-  goFullscreen: PropTypes.func.isRequired,
   updateElapsedTime: PropTypes.func.isRequired,
 };
 
@@ -25,7 +24,6 @@ const PageRenderer = ({
   handleGameClick,
   showIntroduction,
   startGame,
-  goFullscreen,
   updateElapsedTime,
 }) => {
   if (page === pages.GAME) {
@@ -44,7 +42,7 @@ const PageRenderer = ({
   }
 
   // => page === pages.INTRODUCTION
-  return <Introduction startGame={startGame} goFullscreen={goFullscreen} />;
+  return <Introduction startGame={startGame} />;
 };
 
 PageRenderer.propTypes = propTypes;
