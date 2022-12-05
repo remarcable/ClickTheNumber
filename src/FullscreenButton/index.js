@@ -1,9 +1,14 @@
 import React from "react";
-import goFullscreen from "../lib/goFullscreen";
+import toggleFullscreen from "../lib/toggleFullscreen";
 import "./FullscreenButton.css";
 
 const FullscreenButton = () => (
-  <button type="button" onClick={goFullscreen} className="fullscreen-button" alt="Go Fullscreen">
+  <button
+    type="button"
+    onClick={toggleFullscreen}
+    className="fullscreen-button"
+    alt="Go Fullscreen"
+  >
     <FullscreenIcon />
   </button>
 );

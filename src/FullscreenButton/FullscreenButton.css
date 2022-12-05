@@ -9,4 +9,11 @@
   right: 00px;
   cursor: pointer;
   transform: scale(0.8);
+  opacity: 0.5;
+
+  transition: opacity 0.2s;
+}
+
+.fullscreen-button:hover {
+  opacity: 1;
 }
