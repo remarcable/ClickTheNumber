@@ -1,8 +1,8 @@
-# [Click The Number!](http://marcnitzsche.de/ClickTheNumber/)
+# [Click The Number](http://projects.marcnitzsche.de/ClickTheNumber/)
 
-Test your reaction time with this fun game.
+Test your reaction time with this number clicking game. Click the numbers in ascending order to succeed. [Play Now.](http://projects.marcnitzsche.de/ClickTheNumber/)
 
-+-+
+## Instructions
 
 Click on the boxes with the numbers from 1 to 25 in ascending order.
 
@@ -20,9 +20,8 @@ Click on the boxes with the numbers from 1 to 25 in ascending order.
 
 Create a pull request to be included in this awesome leaderboard! Please update Readme.md and Leaderboard.json. I love to hear from you!
 
-| Name                                   | Time    |
-| -------------------------------------- | ------- |
-| Paul                                   | 12.329s |
-| [Janek](https://github.com/janek/)     | 14.626s |
-| [Marc](https://github.com/remarcable/) | 19.331s |
-| [Marc](https://github.com/remarcable/) | 28.791s |
+| Name                                   | Time   |
+| -------------------------------------- | ------ |
+| Paul                                   | 12.33s |
+| [Janek](https://github.com/janek/)     | 14.63s |
+| [Marc](https://github.com/remarcable/) | 19.33s |
