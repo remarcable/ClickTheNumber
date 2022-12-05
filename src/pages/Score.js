@@ -14,10 +14,10 @@ const Score = ({ showIntroduction, elapsedTime }) => {
   return (
     <main>
       <div className="done">
-        {random(gameDoneMessages)} Your time: {getElapsedSeconds(elapsedTime)}s
+        Your time: {getElapsedSeconds(elapsedTime)}s – {random(gameDoneMessages)}
       </div>
       <Button onClick={showIntroduction} isLifted>
-        New Game
+        Restart
       </Button>
     </main>
   );
@@ -29,18 +29,16 @@ const gameDoneMessages = [
   "Well done!",
   "Really good!",
   "Awesome!",
-  "This was good!",
   "Excellent!",
   "Good job!",
   "Bravo!",
   "Fantastic!",
-  "You did it!",
   "Keep it up!",
 ];
 
 function getElapsedSeconds(elapsedTime) {
   const elapsedSeconds = elapsedTime / 1000;
-  return elapsedSeconds.toFixed(3);
+  return elapsedSeconds.toFixed(2);
 }
 
 export default Score;
