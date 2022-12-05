@@ -1,1 +1,1 @@
-import './Leaderboard.css';
+import "./Leaderboard.css";

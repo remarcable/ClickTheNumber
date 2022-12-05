@@ -2,7 +2,7 @@
   "name": "ClickTheNumber",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://marcnitzsche.de/ClickTheNumber",
+  "homepage": "https://projects.marcnitzsche.de/ClickTheNumber",
   "devDependencies": {
     "gh-pages": "^2.1.1",
     "react-scripts": "^3.1.1"
