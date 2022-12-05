@@ -1,4 +1,4 @@
-# [Click The Number](http://projects.marcnitzsche.de/ClickTheNumber/)
+Click The Number
 
 Test your reaction time with this fun and simple game. To play, click on the boxes with the numbers from 1 to 25 in ascending order. [Play Now.](http://projects.marcnitzsche.de/ClickTheNumber/)
 
