@@ -2,11 +2,12 @@
   padding: 30px;
   border: 0;
   text-transform: uppercase;
-  color: #fff;
+  color: #2f2e30;
   background-color: #e8b748;
   box-shadow: -9px 21px 70px -10px rgba(0, 0, 0, 0.2);
   transition: all 0.2s;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .btn.lifted {

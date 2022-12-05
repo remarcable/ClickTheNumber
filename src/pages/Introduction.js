@@ -11,7 +11,7 @@ const Introduction = ({ startGame }) => (
   <main className="introduction">
     <h1 className="title">Click The Number</h1>
     <h2 className="subtitle">Click them in ascending order</h2>
-    <Button onClick={startGame}>Start</Button>
+    <Button onClick={startGame}>Start Now</Button>
   </main>
 );
 
