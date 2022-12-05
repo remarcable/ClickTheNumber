@@ -8,7 +8,7 @@ const propTypes = {
   randomNumbers: PropTypes.array.isRequired,
   currentNumber: PropTypes.number.isRequired,
   handleGameClick: PropTypes.func.isRequired,
-  updateElapsedTime: PropTypes.func.isRequired
+  updateElapsedTime: PropTypes.func.isRequired,
 };
 
 export default class Game extends Component {
@@ -26,7 +26,7 @@ export default class Game extends Component {
 
     return (
       <main>
-        {randomNumbers.map(n => (
+        {randomNumbers.map((n) => (
           <NumberBox
             n={n}
             key={n}

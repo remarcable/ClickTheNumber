@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import React from "react";
+import PropTypes from "prop-types";
+import classnames from "classnames";
 
-import './Button.css';
+import "./Button.css";
 
 const propTypes = {
   isLifted: PropTypes.bool,
@@ -14,12 +14,12 @@ const propTypes = {
 const Button = ({ isLifted, isSmall, children, onClick }) => (
   <button
     type="button"
-    className={classnames('btn', { lifted: isLifted, small: isSmall })}
+    className={classnames("btn", { lifted: isLifted, small: isSmall })}
     onClick={onClick}
   >
     {children}
   </button>
-  );
+);
 
 Button.propTypes = propTypes;
 

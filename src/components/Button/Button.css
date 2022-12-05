@@ -4,8 +4,8 @@
   text-transform: uppercase;
   color: #fff;
   background-color: #e8b748;
-  box-shadow: -9px 21px 70px -10px rgba(0,0,0,0.20);
-  transition: all .2s;
+  box-shadow: -9px 21px 70px -10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
 }
 
 .btn.lifted {
@@ -14,7 +14,7 @@
   background-color: #fcbe32;
 }
 
-@media only screen and (max-width : 750px) {
+@media only screen and (max-width: 750px) {
   .btn.lifted {
     padding: 30px;
     transform: scale3d(1.1, 1.1, 1);
@@ -36,7 +36,7 @@
   outline: 0;
 }
 .btn:active {
-  transform: scale3d(1, 1, 1)
+  transform: scale3d(1, 1, 1);
 }
 .btn:hover {
   background-color: #fcbe32;

@@ -13,7 +13,7 @@ const NUMBER_BOX_COUNT = 25;
 
 class App extends Component {
   state = { page: pages.INTRODUCTION, elapsedTime: 0 };
-  handleGameClick = clickedNumber => {
+  handleGameClick = (clickedNumber) => {
     const { currentNumber } = this.state;
     const nextNumber = currentNumber + 1;
     if (clickedNumber === nextNumber) {
@@ -34,7 +34,7 @@ class App extends Component {
     this.setState({ page: pages.INTRODUCTION });
   };
 
-  updateElapsedTime = elapsedTime => {
+  updateElapsedTime = (elapsedTime) => {
     this.setState({ elapsedTime });
   };
 

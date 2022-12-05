@@ -7,7 +7,7 @@ import "./Score.css";
 
 const propTypes = {
   showIntroduction: PropTypes.func.isRequired,
-  elapsedTime: PropTypes.number.isRequired
+  elapsedTime: PropTypes.number.isRequired,
 };
 
 const Score = ({ showIntroduction, elapsedTime }) => {
@@ -26,13 +26,16 @@ const Score = ({ showIntroduction, elapsedTime }) => {
 Score.propTypes = propTypes;
 
 const gameDoneMessages = [
-  "You did it!",
-  "Alright!",
+  "Well done!",
+  "Really good!",
   "Awesome!",
-  "What the fuck.",
-  "Amazing!",
-  "Did you beat the boss?",
-  "This horse is amazing!"
+  "This was good!",
+  "Excellent!",
+  "Good job!",
+  "Bravo!",
+  "Fantastic!",
+  "You did it!",
+  "Keep it up!",
 ];
 
 function getElapsedSeconds(elapsedTime) {

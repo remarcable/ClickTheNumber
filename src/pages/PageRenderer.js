@@ -11,13 +11,13 @@ const propTypes = {
     page: PropTypes.string.isRequired,
     currentNumber: PropTypes.number,
     randomNumbers: PropTypes.arrayOf(PropTypes.number.isRequired),
-    elapsedTime: PropTypes.number.isRequired
+    elapsedTime: PropTypes.number.isRequired,
   }).isRequired,
   handleGameClick: PropTypes.func.isRequired,
   showIntroduction: PropTypes.func.isRequired,
   startGame: PropTypes.func.isRequired,
   goFullscreen: PropTypes.func.isRequired,
-  updateElapsedTime: PropTypes.func.isRequired
+  updateElapsedTime: PropTypes.func.isRequired,
 };
 
 const PageRenderer = ({
@@ -26,7 +26,7 @@ const PageRenderer = ({
   showIntroduction,
   startGame,
   goFullscreen,
-  updateElapsedTime
+  updateElapsedTime,
 }) => {
   if (page === pages.GAME) {
     return (

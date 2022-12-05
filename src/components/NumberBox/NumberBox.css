@@ -8,14 +8,14 @@
   background-color: #fcbe32;
   border: 0;
   outline: 0;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .active {
   background-color: #3b8686;
 }
 
-@media only screen and (max-width : 750px) {
+@media only screen and (max-width: 750px) {
   .number {
     margin: 2px;
     width: 65px;
