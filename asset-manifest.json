@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ClickTheNumber/static/css/main.029bf9e2.chunk.css",
+    "main.css": "/ClickTheNumber/static/css/main.33d1d4ce.chunk.css",
     "main.js": "/ClickTheNumber/static/js/main.d7fcb679.chunk.js",
     "main.js.map": "/ClickTheNumber/static/js/main.d7fcb679.chunk.js.map",
     "runtime-main.js": "/ClickTheNumber/static/js/runtime-main.fc463bdf.js",
@@ -9,17 +9,17 @@
     "static/js/2.e6158b53.chunk.js": "/ClickTheNumber/static/js/2.e6158b53.chunk.js",
     "static/js/2.e6158b53.chunk.js.map": "/ClickTheNumber/static/js/2.e6158b53.chunk.js.map",
     "index.html": "/ClickTheNumber/index.html",
-    "precache-manifest.d090495464b07dc3329ee85c03a14c3a.js": "/ClickTheNumber/precache-manifest.d090495464b07dc3329ee85c03a14c3a.js",
+    "precache-manifest.516d0cff6ac1e2b68ffb72c29b46cdd8.js": "/ClickTheNumber/precache-manifest.516d0cff6ac1e2b68ffb72c29b46cdd8.js",
     "service-worker.js": "/ClickTheNumber/service-worker.js",
     "static/css/2.764ccc25.chunk.css.map": "/ClickTheNumber/static/css/2.764ccc25.chunk.css.map",
-    "static/css/main.029bf9e2.chunk.css.map": "/ClickTheNumber/static/css/main.029bf9e2.chunk.css.map",
+    "static/css/main.33d1d4ce.chunk.css.map": "/ClickTheNumber/static/css/main.33d1d4ce.chunk.css.map",
     "static/js/2.e6158b53.chunk.js.LICENSE.txt": "/ClickTheNumber/static/js/2.e6158b53.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.fc463bdf.js",
     "static/css/2.764ccc25.chunk.css",
     "static/js/2.e6158b53.chunk.js",
-    "static/css/main.029bf9e2.chunk.css",
+    "static/css/main.33d1d4ce.chunk.css",
     "static/js/main.d7fcb679.chunk.js"
   ]
 }

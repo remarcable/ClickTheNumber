@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e795d6d04c8c4fe3bbf105a01b6cdf4a",
+    "revision": "3a2a45d4eb89f634aa410361964638c5",
     "url": "/ClickTheNumber/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ClickTheNumber/static/css/2.764ccc25.chunk.css"
   },
   {
-    "revision": "2b3fc100dae0d93d5418",
-    "url": "/ClickTheNumber/static/css/main.029bf9e2.chunk.css"
+    "revision": "7c6031245665d30c3014",
+    "url": "/ClickTheNumber/static/css/main.33d1d4ce.chunk.css"
   },
   {
     "revision": "8dd6e4789875fa503636",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ClickTheNumber/static/js/2.e6158b53.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2b3fc100dae0d93d5418",
+    "revision": "7c6031245665d30c3014",
     "url": "/ClickTheNumber/static/js/main.d7fcb679.chunk.js"
   },
   {
