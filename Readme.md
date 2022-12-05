@@ -1,24 +1,10 @@
 # [Click The Number](http://projects.marcnitzsche.de/ClickTheNumber/)
 
-Test your reaction time with this number clicking game. Click the numbers in ascending order to succeed. [Play Now.](http://projects.marcnitzsche.de/ClickTheNumber/)
-
-## Instructions
-
-Click on the boxes with the numbers from 1 to 25 in ascending order.
-
-```
-
-[ 21 ] [ 17 ] [ 22 ] [ 14 ] [ 12 ]
-[  9 ] [ 23 ] [ 11 ] [ 25 ] [ 18 ]
-[ 13 ] [ 15 ] [ 19 ] [  7 ] [ 24 ]
-[  8 ] [ 20 ] [  1 ] [  5 ] [  6 ]
-[  4 ] [  3 ] [ 10 ] [  2 ] [ 16 ]
-
-```
+Test your reaction time with this fun and simple game. To play, click on the boxes with the numbers from 1 to 25 in ascending order. [Play Now.](http://projects.marcnitzsche.de/ClickTheNumber/)
 
 ## Leaderboard
 
-Create a pull request to be included in this awesome leaderboard! Please update Readme.md and Leaderboard.json. I love to hear from you!
+Create a pull request to be included in this leaderboard. Please update `Readme.md` and `leaderboard.json` with your result. I'm curious how fast you can be. 🤔
 
 | Name                                   | Time   |
 | -------------------------------------- | ------ |
