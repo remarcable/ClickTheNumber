@@ -10,7 +10,9 @@ const propTypes = {
 const Introduction = ({ startGame }) => (
   <main className="introduction">
     <h1 className="title">Click The Number</h1>
-    <h2 className="subtitle">Click them in ascending order</h2>
+    <h2 className="subtitle">
+      Test your reaction time with <br /> this fun and simple game.
+    </h2>
     <Button onClick={startGame}>Start Now</Button>
   </main>
 );
