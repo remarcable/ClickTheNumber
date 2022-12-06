@@ -5,7 +5,6 @@ import PageRenderer from "../pages/PageRenderer";
 import randomRange from "../lib/RandomRange";
 
 import "./App.css";
-import FullscreenButton from "../FullscreenButton";
 
 const NUMBER_BOX_COUNT = 5;
 
@@ -35,7 +34,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <FullscreenButton />
         <PageRenderer
           currentState={this.state}
           handleGameClick={this.handleGameClick}
