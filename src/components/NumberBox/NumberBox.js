@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import classnames from "classnames";
 
 import "./NumberBox.css";
 
@@ -11,10 +10,7 @@ const propTypes = {
 };
 
 const NumberBox = ({ n, currentNumber, handleGameClick }) => (
-  <button
-    className={classnames("number", { disabled: currentNumber >= n })}
-    onMouseDown={() => handleGameClick(n)}
-  >
+  <button className="number" onMouseDown={() => handleGameClick(n)} disabled={currentNumber >= n}>
     {n}
   </button>
 );
