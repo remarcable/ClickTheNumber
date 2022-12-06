@@ -16,7 +16,10 @@ const Score = ({ startGame, elapsedTime }) => {
       <h1 className="title">
         Your Time: <span>{getElapsedSeconds(elapsedTime)}s</span>
       </h1>
-      <h2 className="subtitle">{random(gameDoneMessages)}</h2>
+      <h2 className="subtitle">
+        {random(gameDoneMessages)} If you like this game, also check out{" "}
+        <a href="https://www.marcnitzsche.de/about/">my other projects</a>.
+      </h2>
       <Button onClick={startGame}>Try Again</Button>
     </main>
   );
