@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { pageNames } from "./pages/pageNames";
+import { pageNames } from "./pageNames";
 import { getRandomRange } from "./lib/getRandomRange";
 import Introduction from "./pages/Introduction";
 import Score from "./pages/Score";
