@@ -1,6 +1,6 @@
 const STORAGE_KEY = "best-time";
 
-export const getHighscore = () => {
+export const getPersistedHighscore = () => {
   const highscore = localStorage.getItem(STORAGE_KEY);
   if (highscore !== null) {
     return +highscore;
@@ -9,7 +9,7 @@ export const getHighscore = () => {
   return null;
 };
 
-export const updateHighscore = (newTime) => {
+export const updatePersistedHighscore = (newTime) => {
   const oldBestTime = localStorage.getItem(STORAGE_KEY);
 
   if (oldBestTime === null || newTime < +oldBestTime) {

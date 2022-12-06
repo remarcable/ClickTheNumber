@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { Component, useCallback, useState } from "react";
 
 import { pageNames } from "./pageNames";
-import { getHighscore, updateHighscore } from "./lib/persistGameData";
+import { getPersistedHighscore, updatePersistedHighscore } from "./lib/persistGameData";
 import { getRandomRange } from "./lib/getRandomRange";
 
 import Introduction from "./pages/Introduction";
@@ -11,55 +11,57 @@ import Game from "./pages/Game";
 import "./App.css";
 
 const NUMBER_BOX_COUNT = 5;
+const App = () => {
+  const [page, setPage] = useState(pageNames.INTRODUCTION);
+  const [elapsedTime, setElapsedTime] = useState(0);
+  const [highscore, setHighscore] = useState(null);
+  const [currentNumber, setCurrentNumber] = useState(0);
+  const [randomNumbers, setRandomNumbers] = useState([]);
 
-class App extends Component {
-  state = { page: pageNames.INTRODUCTION, elapsedTime: 0, highscore: null };
-  handleGameClick = (clickedNumber) => {
-    const { currentNumber } = this.state;
-    const nextNumber = currentNumber + 1;
-    if (clickedNumber === nextNumber) {
-      this.setState({ currentNumber: nextNumber });
-    }
+  const startGame = useCallback(() => {
+    setPage(pageNames.GAME);
+    setCurrentNumber(0);
+    setRandomNumbers(getRandomRange(NUMBER_BOX_COUNT));
+    setHighscore(getPersistedHighscore());
+  }, []);
 
-    if (nextNumber === NUMBER_BOX_COUNT) {
-      this.setState({ page: pageNames.SCORE });
-    }
-  };
+  const handleGameClick = useCallback(
+    (clickedNumber) => {
+      const nextNumber = currentNumber + 1;
+      if (clickedNumber === nextNumber) {
+        setCurrentNumber(nextNumber);
+      }
 
-  startGame = () => {
-    const randomNumbers = getRandomRange(NUMBER_BOX_COUNT);
-    const highscore = getHighscore();
-    this.setState({ page: pageNames.GAME, currentNumber: 0, randomNumbers, highscore });
-  };
+      if (nextNumber === NUMBER_BOX_COUNT) {
+        setPage(pageNames.SCORE);
+      }
+    },
+    [currentNumber]
+  );
 
-  updateElapsedTime = (elapsedTime) => {
-    this.setState({ elapsedTime });
-    updateHighscore(elapsedTime);
-  };
+  const updateElapsedTime = useCallback((elapsedTime) => {
+    setElapsedTime(elapsedTime);
+    updatePersistedHighscore(elapsedTime);
+  }, []);
 
-  render() {
-    const { page, currentNumber, randomNumbers, elapsedTime, highscore } = this.state;
-    const { handleGameClick, startGame, updateElapsedTime } = this;
+  return (
+    <div className="App">
+      {page === pageNames.INTRODUCTION && <Introduction startGame={startGame} />}
 
-    return (
-      <div className="App">
-        {page === pageNames.INTRODUCTION && <Introduction startGame={startGame} />}
+      {page === pageNames.GAME && (
+        <Game
+          currentNumber={currentNumber}
+          randomNumbers={randomNumbers}
+          handleGameClick={handleGameClick}
+          updateElapsedTime={updateElapsedTime}
+        />
+      )}
 
-        {page === pageNames.GAME && (
-          <Game
-            currentNumber={currentNumber}
-            randomNumbers={randomNumbers}
-            handleGameClick={handleGameClick}
-            updateElapsedTime={updateElapsedTime}
-          />
-        )}
-
-        {page === pageNames.SCORE && (
-          <Score restartGame={startGame} elapsedTime={elapsedTime} highscore={highscore} />
-        )}
-      </div>
-    );
-  }
-}
+      {page === pageNames.SCORE && (
+        <Score restartGame={startGame} elapsedTime={elapsedTime} highscore={highscore} />
+      )}
+    </div>
+  );
+};
 
 export default App;
