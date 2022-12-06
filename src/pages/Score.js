@@ -31,8 +31,11 @@ const Score = ({ startGame, elapsedTime, highscore }) => {
       <h2 className="subtitle game-message">{random(gameDoneMessages)}</h2>
       <Button onClick={startGame}>Try Again</Button>
       <h2 className="subtitle small">
-        Check out <a href="https://www.marcnitzsche.de/about/">my other projects</a> if you like
-        this game.
+        Check out{" "}
+        <a href="https://www.marcnitzsche.de/about?utm_source=clickthenumber&utm_medium=web&utm_campaign=scorepage">
+          my other projects
+        </a>{" "}
+        if you like this game.
       </h2>
     </main>
   );
