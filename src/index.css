@@ -33,8 +33,7 @@ main {
   --text-color: #e3ecee;
   --text-color-dark: #546a9e;
   --background-color: #000e14;
-  --color1: #00293d;
-  --color2: #003047;
-  --color3: #003652;
-  --color4: #003d5c;
+  --highlight-color: #5d0933;
+  --button-color: #003d5c;
+  --button-color-disabled: #00293d;
 }

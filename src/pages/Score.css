@@ -1,11 +1,8 @@
-.done {
-  padding: 40px;
-  color: #111;
-  background-color: #e1eef6;
+.score-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
-@media only screen and (max-width: 750px) {
-  .done {
-    padding: 20px;
-  }
+.score-text {
+  margin-bottom: 16px;
 }

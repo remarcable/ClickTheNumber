@@ -5,15 +5,16 @@
   font-size: 25px;
   font-weight: 600;
   color: var(--text-color);
-  background-color: var(--color4);
+  background-color: var(--button-color);
   border: 0;
   outline: 0;
   transition: color 0.2s, background-color 0.3s;
+  border-radius: 4px;
 }
 
-.active {
+.disabled {
   color: var(--text-color-dark);
-  background-color: var(--color1);
+  background-color: var(--button-color-disabled);
 }
 
 @media only screen and (max-width: 750px) {

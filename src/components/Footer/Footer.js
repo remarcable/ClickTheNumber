@@ -7,7 +7,7 @@ const Footer = () => (
     <a
       rel="noopener noreferrer"
       target="_blank"
-      href="https://github.com/lightningboss/ClickTheNumber"
+      href="https://github.com/remarcable/ClickTheNumber"
     >
       Marc
     </a>

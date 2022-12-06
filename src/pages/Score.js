@@ -12,13 +12,12 @@ const propTypes = {
 
 const Score = ({ startGame, elapsedTime }) => {
   return (
-    <main>
-      <div className="done">
-        Your time: {getElapsedSeconds(elapsedTime)}s – {random(gameDoneMessages)}
-      </div>
-      <Button onClick={startGame} isLifted>
-        Restart
-      </Button>
+    <main className="text-button-group">
+      <h1 className="title">
+        Your Time: <span>{getElapsedSeconds(elapsedTime)}s</span>
+      </h1>
+      <h2 className="subtitle">{random(gameDoneMessages)}</h2>
+      <Button onClick={startGame}>Try Again</Button>
     </main>
   );
 };

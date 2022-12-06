@@ -12,7 +12,7 @@ const propTypes = {
 
 const NumberBox = ({ n, currentNumber, handleGameClick }) => (
   <button
-    className={classnames("number", { active: currentNumber >= n })}
+    className={classnames("number", { disabled: currentNumber >= n })}
     onMouseDown={() => handleGameClick(n)}
   >
     {n}

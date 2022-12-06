@@ -6,3 +6,27 @@
   align-items: center;
   transition: all 0.3s;
 }
+
+.text-button-group {
+  flex-direction: column;
+  color: #fff;
+}
+
+.title {
+  font-size: 30px;
+  margin-bottom: 24px;
+}
+
+.title span {
+  user-select: all;
+  padding: 0 8px;
+  background-color: var(--highlight-color);
+}
+
+.subtitle {
+  margin-top: -10px;
+  margin-bottom: 36px;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 1.3;
+}
