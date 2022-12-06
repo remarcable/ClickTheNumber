@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { pages } from "../pages/pages";
+import { pageNames } from "../pages/pageNames";
 import { getRandomRange } from "../lib/getRandomRange";
 import Introduction from "../pages/Introduction";
 import Score from "../pages/Score";
@@ -12,7 +12,7 @@ import { getHighscore, updateHighscore } from "../lib/persistGameData";
 const NUMBER_BOX_COUNT = 5;
 
 class App extends Component {
-  state = { page: pages.INTRODUCTION, elapsedTime: 0, highscore: null };
+  state = { page: pageNames.INTRODUCTION, elapsedTime: 0, highscore: null };
   handleGameClick = (clickedNumber) => {
     const { currentNumber } = this.state;
     const nextNumber = currentNumber + 1;
@@ -21,14 +21,14 @@ class App extends Component {
     }
 
     if (nextNumber === NUMBER_BOX_COUNT) {
-      this.setState({ page: pages.SCORE });
+      this.setState({ page: pageNames.SCORE });
     }
   };
 
   startGame = () => {
     const randomNumbers = getRandomRange(NUMBER_BOX_COUNT);
     const highscore = getHighscore();
-    this.setState({ page: pages.GAME, currentNumber: 0, randomNumbers, highscore });
+    this.setState({ page: pageNames.GAME, currentNumber: 0, randomNumbers, highscore });
   };
 
   updateElapsedTime = (elapsedTime) => {
@@ -42,9 +42,9 @@ class App extends Component {
 
     return (
       <div className="App">
-        {page === pages.INTRODUCTION && <Introduction startGame={startGame} />}
+        {page === pageNames.INTRODUCTION && <Introduction startGame={startGame} />}
 
-        {page === pages.GAME && (
+        {page === pageNames.GAME && (
           <Game
             currentNumber={currentNumber}
             randomNumbers={randomNumbers}
@@ -53,7 +53,7 @@ class App extends Component {
           />
         )}
 
-        {page === pages.SCORE && (
+        {page === pageNames.SCORE && (
           <Score restartGame={startGame} elapsedTime={elapsedTime} highscore={highscore} />
         )}
       </div>

@@ -4,7 +4,6 @@ import random from "just-random";
 import classnames from "classnames";
 
 import Button from "../components/Button/Button";
-import "./Score.css";
 
 const propTypes = {
   restartGame: PropTypes.func.isRequired,
