@@ -4,13 +4,13 @@
   "private": true,
   "homepage": "https://projects.marcnitzsche.de/ClickTheNumber",
   "devDependencies": {
-    "gh-pages": "^2.1.1",
+    "gh-pages": "^4.0.0",
     "react-scripts": "^5.0.1"
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "just-random": "^2.1.0",
-    "just-shuffle": "^2.1.0",
+    "just-random": "^3.1.1",
+    "just-shuffle": "^4.1.1",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^18.2.0",
