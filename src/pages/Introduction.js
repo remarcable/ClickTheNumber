@@ -8,7 +8,7 @@ const propTypes = {
 
 const Introduction = ({ startGame }) => (
   <main className="text-button-group">
-    <h1 className="title">Click The Number</h1>
+    <h1 className="title">✨ Click The Number</h1>
     <h2 className="subtitle">
       Test your speed and accuracy with this delightful random number game.
     </h2>
