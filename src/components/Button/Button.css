@@ -12,7 +12,6 @@
 .btn.lifted {
   padding: 40px;
   transform: scale3d(1.1, 1.1, 1);
-  filter: brightness(1.1);
 }
 
 @media only screen and (max-width: 750px) {
@@ -25,9 +24,7 @@
 .btn:focus {
   outline: 0;
 }
-.btn:active {
-  transform: scale3d(1, 1, 1);
-}
+
 .btn:hover {
   filter: brightness(1.1);
 }
