@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 
 import { pageNames } from "./pageNames";
+import { getHighscore, updateHighscore } from "./lib/persistGameData";
 import { getRandomRange } from "./lib/getRandomRange";
+
 import Introduction from "./pages/Introduction";
 import Score from "./pages/Score";
 import Game from "./pages/Game";
 
 import "./App.css";
-import { getHighscore, updateHighscore } from "./lib/persistGameData";
 
 const NUMBER_BOX_COUNT = 5;
 
