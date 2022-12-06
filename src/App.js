@@ -10,7 +10,8 @@ import Game from "./pages/Game";
 
 import "./App.css";
 
-const NUMBER_BOX_COUNT = 5;
+const BOX_COUNT = 25;
+
 const App = () => {
   const [page, setPage] = useState(pageNames.INTRODUCTION);
   const [elapsedTime, setElapsedTime] = useState(0);
@@ -21,7 +22,7 @@ const App = () => {
   const startGame = useCallback(() => {
     setPage(pageNames.GAME);
     setCurrentNumber(0);
-    setRandomNumbers(getRandomRange(NUMBER_BOX_COUNT));
+    setRandomNumbers(getRandomRange(BOX_COUNT));
     setHighscore(getPersistedHighscore());
   }, []);
 
@@ -32,7 +33,7 @@ const App = () => {
         setCurrentNumber(nextNumber);
       }
 
-      if (nextNumber === NUMBER_BOX_COUNT) {
+      if (nextNumber === BOX_COUNT) {
         setPage(pageNames.SCORE);
       }
     },
