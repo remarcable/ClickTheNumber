@@ -6,17 +6,17 @@ import Button from "../components/Button/Button";
 import "./Score.css";
 
 const propTypes = {
-  showIntroduction: PropTypes.func.isRequired,
+  startGame: PropTypes.func.isRequired,
   elapsedTime: PropTypes.number.isRequired,
 };
 
-const Score = ({ showIntroduction, elapsedTime }) => {
+const Score = ({ startGame, elapsedTime }) => {
   return (
     <main>
       <div className="done">
         Your time: {getElapsedSeconds(elapsedTime)}s – {random(gameDoneMessages)}
       </div>
-      <Button onClick={showIntroduction} isLifted>
+      <Button onClick={startGame} isLifted>
         Restart
       </Button>
     </main>

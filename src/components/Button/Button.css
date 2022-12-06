@@ -1,8 +1,8 @@
 .btn {
   padding: 30px;
   border: 0;
-  color: #2f2e30;
-  background-color: #e8b748;
+  color: var(--text-color);
+  background-color: var(--color4);
   box-shadow: -9px 21px 70px -10px rgba(0, 0, 0, 0.2);
   transition: all 0.2s;
   cursor: pointer;
@@ -12,7 +12,7 @@
 .btn.lifted {
   padding: 40px;
   transform: scale3d(1.1, 1.1, 1);
-  background-color: #fcbe32;
+  filter: brightness(1.1);
 }
 
 @media only screen and (max-width: 750px) {
@@ -29,5 +29,5 @@
   transform: scale3d(1, 1, 1);
 }
 .btn:hover {
-  background-color: #fcbe32;
+  filter: brightness(1.1);
 }

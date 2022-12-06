@@ -14,7 +14,6 @@ const propTypes = {
     elapsedTime: PropTypes.number.isRequired,
   }).isRequired,
   handleGameClick: PropTypes.func.isRequired,
-  showIntroduction: PropTypes.func.isRequired,
   startGame: PropTypes.func.isRequired,
   updateElapsedTime: PropTypes.func.isRequired,
 };
@@ -22,7 +21,6 @@ const propTypes = {
 const PageRenderer = ({
   currentState: { page, currentNumber, randomNumbers, elapsedTime },
   handleGameClick,
-  showIntroduction,
   startGame,
   updateElapsedTime,
 }) => {
@@ -38,7 +36,7 @@ const PageRenderer = ({
   }
 
   if (page === pages.SCORE) {
-    return <Score showIntroduction={showIntroduction} elapsedTime={elapsedTime} />;
+    return <Score startGame={startGame} elapsedTime={elapsedTime} />;
   }
 
   // => page === pages.INTRODUCTION

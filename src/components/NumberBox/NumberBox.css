@@ -4,16 +4,16 @@
   margin: 10px;
   font-size: 25px;
   font-weight: 600;
-  color: #2f2e30;
-  background-color: #fcbe32;
+  color: var(--text-color);
+  background-color: var(--color4);
   border: 0;
   outline: 0;
   transition: color 0.2s, background-color 0.3s;
 }
 
 .active {
-  color: #207878;
-  background-color: #3ab4b4;
+  color: var(--text-color-dark);
+  background-color: var(--color1);
 }
 
 @media only screen and (max-width: 750px) {
