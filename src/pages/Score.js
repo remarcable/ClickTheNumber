@@ -7,12 +7,12 @@ import Button from "../components/Button/Button";
 import "./Score.css";
 
 const propTypes = {
-  startGame: PropTypes.func.isRequired,
+  restartGame: PropTypes.func.isRequired,
   elapsedTime: PropTypes.number.isRequired,
   highscore: PropTypes.number,
 };
 
-const Score = ({ startGame, elapsedTime, highscore }) => {
+const Score = ({ restartGame, elapsedTime, highscore }) => {
   return (
     <main className="text-button-group">
       <h1 className="title">
@@ -29,7 +29,7 @@ const Score = ({ startGame, elapsedTime, highscore }) => {
         </h2>
       )}
       <h2 className="subtitle game-message">{random(gameDoneMessages)}</h2>
-      <Button onClick={startGame}>Try Again</Button>
+      <Button onClick={restartGame}>Try Again</Button>
       <h2 className="subtitle small">
         Check out{" "}
         <a href="https://www.marcnitzsche.de/about?utm_source=clickthenumber&utm_medium=web&utm_campaign=scorepage">

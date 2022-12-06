@@ -54,7 +54,7 @@ class App extends Component {
         )}
 
         {page === pages.SCORE && (
-          <Score startGame={startGame} elapsedTime={elapsedTime} highscore={highscore} />
+          <Score restartGame={startGame} elapsedTime={elapsedTime} highscore={highscore} />
         )}
       </div>
     );
