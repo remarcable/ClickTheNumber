@@ -12,6 +12,7 @@ const propTypes = {
     currentNumber: PropTypes.number,
     randomNumbers: PropTypes.arrayOf(PropTypes.number.isRequired),
     elapsedTime: PropTypes.number.isRequired,
+    highscore: PropTypes.number,
   }).isRequired,
   handleGameClick: PropTypes.func.isRequired,
   startGame: PropTypes.func.isRequired,
@@ -19,7 +20,7 @@ const propTypes = {
 };
 
 const PageRenderer = ({
-  currentState: { page, currentNumber, randomNumbers, elapsedTime },
+  currentState: { page, currentNumber, randomNumbers, elapsedTime, highscore },
   handleGameClick,
   startGame,
   updateElapsedTime,
@@ -36,7 +37,7 @@ const PageRenderer = ({
   }
 
   if (page === pages.SCORE) {
-    return <Score startGame={startGame} elapsedTime={elapsedTime} />;
+    return <Score startGame={startGame} elapsedTime={elapsedTime} highscore={highscore} />;
   }
 
   // => page === pages.INTRODUCTION

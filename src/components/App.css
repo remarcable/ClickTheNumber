@@ -15,18 +15,22 @@
 .title {
   font-size: 30px;
   margin-top: 0;
-  margin-bottom: 36px;
+  margin-bottom: 0px;
 }
 
 .title span {
   user-select: all;
   padding: 0 8px;
   border-radius: 4px;
-  background-color: var(--highlight-color);
+  background-color: var(--highlight-color-fail);
+}
+
+.title span.isNewHighscore {
+  background-color: var(--highlight-color-success);
 }
 
 .subtitle {
-  margin-top: -10px;
+  margin-top: 26px;
   margin-bottom: 36px;
   font-size: 18px;
   font-weight: 200;
@@ -34,7 +38,18 @@
   max-width: 400px;
 }
 
+.subtitle.game-message {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
 .subtitle.small {
-  margin-top: 36px;
+  margin-top: 48px;
   font-size: 14px;
+}
+
+.subtitle.best-time {
+  font-size: 14px;
+  margin-top: 8px;
+  margin-bottom: 0;
 }

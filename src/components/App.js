@@ -5,11 +5,12 @@ import PageRenderer from "../pages/PageRenderer";
 import randomRange from "../lib/RandomRange";
 
 import "./App.css";
+import { getHighscore, updateHighscore } from "../lib/persistGameData";
 
-const NUMBER_BOX_COUNT = 25;
+const NUMBER_BOX_COUNT = 5;
 
 class App extends Component {
-  state = { page: pages.INTRODUCTION, elapsedTime: 0 };
+  state = { page: pages.INTRODUCTION, elapsedTime: 0, highscore: null };
   handleGameClick = (clickedNumber) => {
     const { currentNumber } = this.state;
     const nextNumber = currentNumber + 1;
@@ -24,11 +25,13 @@ class App extends Component {
 
   startGame = () => {
     const randomNumbers = randomRange(NUMBER_BOX_COUNT);
-    this.setState({ page: pages.GAME, currentNumber: 0, randomNumbers });
+    const highscore = getHighscore();
+    this.setState({ page: pages.GAME, currentNumber: 0, randomNumbers, highscore });
   };
 
   updateElapsedTime = (elapsedTime) => {
     this.setState({ elapsedTime });
+    updateHighscore(elapsedTime);
   };
 
   render() {

@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import random from "just-random";
+import classnames from "classnames";
 
 import Button from "../components/Button/Button";
 import "./Score.css";
@@ -8,15 +9,26 @@ import "./Score.css";
 const propTypes = {
   startGame: PropTypes.func.isRequired,
   elapsedTime: PropTypes.number.isRequired,
+  highscore: PropTypes.number,
 };
 
-const Score = ({ startGame, elapsedTime }) => {
+const Score = ({ startGame, elapsedTime, highscore }) => {
   return (
     <main className="text-button-group">
       <h1 className="title">
-        Your Time: <span>{getElapsedSeconds(elapsedTime)}s</span>
+        Your Time:{" "}
+        <span
+          className={classnames({ isNewHighscore: highscore === null || elapsedTime < highscore })}
+        >
+          {getElapsedSeconds(elapsedTime)}s
+        </span>
       </h1>
-      <h2 className="subtitle">{random(gameDoneMessages)}</h2>
+      {highscore !== null && (
+        <h2 className="subtitle best-time">
+          Your best time so far: {getElapsedSeconds(highscore)}s
+        </h2>
+      )}
+      <h2 className="subtitle game-message">{random(gameDoneMessages)}</h2>
       <Button onClick={startGame}>Try Again</Button>
       <h2 className="subtitle small">
         Check out <a href="https://www.marcnitzsche.de/about/">my other projects</a> if you like
