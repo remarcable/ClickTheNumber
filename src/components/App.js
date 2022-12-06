@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { pages } from "../pages/pages";
-import randomRange from "../lib/RandomRange";
+import { getRandomRange } from "../lib/getRandomRange";
 import Introduction from "../pages/Introduction";
 import Score from "../pages/Score";
 import Game from "../pages/Game";
@@ -26,7 +26,7 @@ class App extends Component {
   };
 
   startGame = () => {
-    const randomNumbers = randomRange(NUMBER_BOX_COUNT);
+    const randomNumbers = getRandomRange(NUMBER_BOX_COUNT);
     const highscore = getHighscore();
     this.setState({ page: pages.GAME, currentNumber: 0, randomNumbers, highscore });
   };
