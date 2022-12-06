@@ -16,11 +16,12 @@
   font-size: 30px;
   margin-top: 0;
   margin-bottom: 0px;
+  letter-spacing: -0.4px;
 }
 
 .title span {
   user-select: all;
-  padding: 0 8px;
+  padding: 0 4px;
   border-radius: 4px;
   background-color: var(--highlight-color-fail);
 }
