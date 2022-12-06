@@ -14,8 +14,5 @@ export const updatePersistedHighscore = (newTime) => {
 
   if (oldBestTime === null || newTime < +oldBestTime) {
     localStorage.setItem(STORAGE_KEY, newTime.toString());
-    return newTime;
   }
-
-  return oldBestTime;
 };
