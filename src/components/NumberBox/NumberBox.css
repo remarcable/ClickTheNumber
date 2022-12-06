@@ -4,7 +4,7 @@
   margin: 10px;
   font-size: 25px;
   font-weight: 600;
-  color: var(--text-color);
+  color: var(--button-text-color);
   background-color: var(--button-color);
   border: 0;
   outline: 0;
@@ -13,7 +13,7 @@
 }
 
 .disabled {
-  color: var(--text-color-dark);
+  color: var(--button-text-color-disabled);
   background-color: var(--button-color-disabled);
 }
 

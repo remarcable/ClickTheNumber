@@ -1,7 +1,7 @@
 .btn {
   padding: 30px;
   border: 0;
-  color: var(--text-color);
+  color: var(--button-text-color);
   background-color: var(--button-color);
   box-shadow: -9px 21px 70px -10px rgba(0, 0, 0, 0.2);
   transition: all 0.2s;

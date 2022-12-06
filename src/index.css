@@ -6,6 +6,7 @@ html {
   font-size: 20px;
   font-weight: 600;
   text-align: center;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -45,9 +46,10 @@ a:hover {
 
 :root {
   --text-color: #e3ecee;
-  --text-color-dark: #546a9e;
-  --background-color: #000e14;
+  --background-color: #120d26;
   --highlight-color: #5d0933;
-  --button-color: #003d5c;
-  --button-color-disabled: #364465;
+  --button-color: #201b3a;
+  --button-color-disabled: #181427;
+  --button-text-color: #e0e4ef;
+  --button-text-color-disabled: #643964;
 }
