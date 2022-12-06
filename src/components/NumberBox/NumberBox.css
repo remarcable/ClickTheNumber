@@ -18,10 +18,42 @@
 }
 
 @media only screen and (max-width: 750px) {
+  .numbers-wrapper {
+    width: 500px;
+  }
+
   .number {
-    margin: 2px;
+    margin: 4px;
+
+    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
+
+    height: 80px;
+    min-height: 80px;
+    max-height: 80px;
+
+    font-size: 20px;
+    flex-grow: 1;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .numbers-wrapper {
+    width: 500px;
+  }
+
+  .number {
+    margin: 4px;
+
     width: 65px;
+    min-width: 65px;
+    max-width: 65px;
+
     height: 65px;
+    min-height: 65px;
+    max-height: 65px;
+
     font-size: 20px;
     flex-grow: 1;
   }

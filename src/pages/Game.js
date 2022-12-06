@@ -25,7 +25,7 @@ export default class Game extends Component {
     const { randomNumbers, currentNumber, handleGameClick } = this.props;
 
     return (
-      <main>
+      <main className="numbers-wrapper">
         {randomNumbers.map((n) => (
           <NumberBox
             n={n}
