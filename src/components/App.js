@@ -7,7 +7,7 @@ import randomRange from "../lib/RandomRange";
 import "./App.css";
 import { getHighscore, updateHighscore } from "../lib/persistGameData";
 
-const NUMBER_BOX_COUNT = 5;
+const NUMBER_BOX_COUNT = 25;
 
 class App extends Component {
   state = { page: pages.INTRODUCTION, elapsedTime: 0, highscore: null };
