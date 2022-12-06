@@ -23,6 +23,21 @@ main {
   flex-wrap: wrap;
 }
 
+a {
+  color: var(--text-color);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+a:visited {
+  color: var(--text-color);
+}
+
+a:hover {
+  color: var(--text-color);
+  filter: brightness(1.2);
+}
+
 #root {
   width: 100%;
   height: 100%;

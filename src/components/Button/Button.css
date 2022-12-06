@@ -10,18 +10,6 @@
   border-radius: 4px;
 }
 
-.btn.lifted {
-  padding: 40px;
-  transform: scale3d(1.1, 1.1, 1);
-}
-
-@media only screen and (max-width: 750px) {
-  .btn.lifted {
-    padding: 30px;
-    transform: scale3d(1.1, 1.1, 1);
-  }
-}
-
 .btn:focus {
   outline: 0;
 }

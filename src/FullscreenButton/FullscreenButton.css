@@ -1,8 +1,11 @@
+.fullscreen-icon {
+  fill: var(--text-color);
+}
+
 .fullscreen-button {
   background-color: transparent;
   border: 0;
   outline: 0;
-  color: #fff;
 
   position: absolute;
   top: 00px;

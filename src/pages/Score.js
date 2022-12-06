@@ -16,11 +16,12 @@ const Score = ({ startGame, elapsedTime }) => {
       <h1 className="title">
         Your Time: <span>{getElapsedSeconds(elapsedTime)}s</span>
       </h1>
-      <h2 className="subtitle">
-        {random(gameDoneMessages)} If you like this game, also check out{" "}
-        <a href="https://www.marcnitzsche.de/about/">my other projects</a>.
-      </h2>
+      <h2 className="subtitle">{random(gameDoneMessages)}</h2>
       <Button onClick={startGame}>Try Again</Button>
+      <h2 className="subtitle small">
+        Check out <a href="https://www.marcnitzsche.de/about/">my other projects</a> if you like
+        this game.
+      </h2>
     </main>
   );
 };
@@ -28,14 +29,12 @@ const Score = ({ startGame, elapsedTime }) => {
 Score.propTypes = propTypes;
 
 const gameDoneMessages = [
-  "Well done!",
-  "Really good!",
-  "Awesome!",
-  "Excellent!",
-  "Good job!",
-  "Bravo!",
-  "Fantastic!",
-  "Keep it up!",
+  "Great job! Why not try again and see if you can beat your own score?",
+  "Well done! Can you do it again and set a new high score?",
+  "Congratulations! You've completed the game. Can you do it again and improve your time?",
+  "You're a true number ninja. Can you do it again and see if you can beat your previous record?",
+  "Wow! Why not try again and see if you can do even better this time?",
+  "Fantastic! Can you do it again and challenge yourself to reach a new level of excellence?",
 ];
 
 function getElapsedSeconds(elapsedTime) {

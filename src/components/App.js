@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 import { pages } from "../pages/pages";
-import Footer from "../components/Footer/Footer";
 import PageRenderer from "../pages/PageRenderer";
 import randomRange from "../lib/RandomRange";
 
@@ -37,7 +36,6 @@ class App extends Component {
     return (
       <div className="App">
         <FullscreenButton />
-        <Footer />
         <PageRenderer
           currentState={this.state}
           handleGameClick={this.handleGameClick}
