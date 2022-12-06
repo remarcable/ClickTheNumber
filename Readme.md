@@ -4,7 +4,7 @@ Test your reaction time with this fun and simple game. To play, click on the box
 
 ## Leaderboard
 
-Create a pull request to be included in this leaderboard. Please update `Readme.md` and `leaderboard.json` with your result. I'm curious how fast you can be. 🤔
+Create a pull request to be included in this leaderboard. Please update `Readme.md` with your result. I'm curious how fast you are. 🤔
 
 | Name                                   | Time   |
 | -------------------------------------- | ------ |
