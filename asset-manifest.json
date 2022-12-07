@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/ClickTheNumber/static/css/main.ec9b1ced.css",
-    "main.js": "/ClickTheNumber/static/js/main.372b5199.js",
+    "main.css": "/ClickTheNumber/static/css/main.da2c587c.css",
+    "main.js": "/ClickTheNumber/static/js/main.03ce09ea.js",
     "index.html": "/ClickTheNumber/index.html",
-    "main.ec9b1ced.css.map": "/ClickTheNumber/static/css/main.ec9b1ced.css.map",
-    "main.372b5199.js.map": "/ClickTheNumber/static/js/main.372b5199.js.map"
+    "main.da2c587c.css.map": "/ClickTheNumber/static/css/main.da2c587c.css.map",
+    "main.03ce09ea.js.map": "/ClickTheNumber/static/js/main.03ce09ea.js.map"
   },
   "entrypoints": [
-    "static/css/main.ec9b1ced.css",
-    "static/js/main.372b5199.js"
+    "static/css/main.da2c587c.css",
+    "static/js/main.03ce09ea.js"
   ]
 }
