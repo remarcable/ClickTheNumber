@@ -1,12 +1,12 @@
 :root {
-  --text-color: #e3ecee;
-  --background-color: #120d26;
-  --highlight-color-success: #095d4e;
-  --highlight-color-fail: #5d0933;
-  --button-color: #201b3a;
-  --button-color-disabled: #181427;
-  --button-text-color: #e0e4ef;
-  --button-text-color-disabled: #643964;
+  --text-color: #f1f5f9;
+  --background-color: #0f172a;
+  --highlight-color-success: #166534;
+  --highlight-color-fail: #991b1b;
+  --button-color: #3730a3;
+  --button-color-disabled: #1e293b;
+  --button-text-color: #e0e7ff;
+  --button-text-color-disabled: #475569;
 }
 
 html {
