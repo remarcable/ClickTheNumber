@@ -31,7 +31,7 @@ const ShareScore = ({ highscore }) => {
         {...shareButtonProps}
         title={title}
         hashtags={["game", "ClickTheNumber"]}
-        related={["marc-nitzsche"]}
+        related={["marc_nitzsche"]}
       >
         <TwitterIcon {...iconProps} />
       </TwitterShareButton>
