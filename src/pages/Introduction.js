@@ -11,7 +11,7 @@ const Introduction = ({ startGame }) => (
   <main className="text-button-group">
     <h1 className="title">✨ Click The Number</h1>
     <h2 className="subtitle">
-      Test your speed and accuracy with this delightful game. Click the numbers in ascending order.
+      Test your speed and accuracy. Click the numbers in ascending order as fast as you can.
     </h2>
     <Button onClick={startGame}>Start Now</Button>
   </main>
