@@ -15,7 +15,7 @@ const ShareScore = ({ highscore }) => {
   const shareButtonProps = {
     url: "https://projects.marcnitzsche.de/ClickTheNumber",
   };
-  const title = `My best time for Click The Number is ${highscore} seconds. Can you beat me?`;
+  const title = `My best time in Click The Number is ${highscore}s. What's yours?`;
 
   const iconProps = {
     size: 40,
@@ -38,7 +38,7 @@ const ShareScore = ({ highscore }) => {
       <WhatsappShareButton {...shareButtonProps} title={title}>
         <WhatsappIcon {...iconProps} />
       </WhatsappShareButton>
-      <EmailShareButton {...shareButtonProps} subject="Check out this game" body={title}>
+      <EmailShareButton {...shareButtonProps} body={title}>
         <EmailIcon {...iconProps} />
       </EmailShareButton>
     </div>
