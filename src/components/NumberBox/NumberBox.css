@@ -22,7 +22,7 @@
 
 .glowing:not(:disabled) {
   animation: shake 0.82s infinite cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-  animation-delay: 8s;
+  animation-delay: 2s;
 }
 
 @keyframes shake {
