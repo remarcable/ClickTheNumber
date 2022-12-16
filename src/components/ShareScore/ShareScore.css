@@ -1,7 +1,7 @@
 .share-score {
   display: flex;
   gap: 12px;
-  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .share-score button {

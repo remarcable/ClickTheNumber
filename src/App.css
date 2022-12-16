@@ -40,12 +40,12 @@
 }
 
 .subtitle.game-message {
-  margin-top: 48px;
-  margin-bottom: 48px;
+  margin-top: 18px;
+  margin-bottom: 24px;
 }
 
 .subtitle.small {
-  margin-top: 48px;
+  margin-top: 24px;
   font-size: 14px;
 }
 

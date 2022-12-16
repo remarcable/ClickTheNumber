@@ -29,8 +29,8 @@ const Score = ({ restartGame, elapsedTime, highscore }) => {
         </h2>
       )}
       <h2 className="subtitle game-message">{random(gameDoneMessages)}</h2>
-      <Button onClick={restartGame}>Try Again</Button>
       <ShareScore highscore={getElapsedSeconds(highscore)} />
+      <Button onClick={restartGame}>Try Again</Button>
       <h2 className="subtitle small">
         Check out{" "}
         <a href="https://www.marcnitzsche.de/about?utm_source=clickthenumber&utm_medium=web&utm_campaign=scorepage">
