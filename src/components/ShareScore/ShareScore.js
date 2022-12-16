@@ -29,7 +29,7 @@ const ShareScore = ({ highscore }) => {
       </FacebookShareButton>
       <TwitterShareButton
         {...shareButtonProps}
-        title="Click The Number speed test"
+        title={title}
         hashtags={["game", "ClickTheNumber"]}
         related={["marc-nitzsche"]}
       >
