@@ -13,7 +13,7 @@ import "./ShareScore.css";
 
 const ShareScore = ({ highscore }) => {
   const shareButtonProps = {
-    url: "https://projects.marcnitzsche.de/ClickTheNumber",
+    url: "https://projects.marcnitzsche.de/ClickTheNumber/",
   };
   const title = `My best time in Click The Number is ${highscore}s. What's yours?`;
 
