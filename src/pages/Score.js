@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import random from "just-random";
 import classnames from "classnames";
 
+import { getElapsedSeconds } from "../lib/getElapsedSeconds";
 import Button from "../components/Button/Button";
 import ShareScore from "../components/ShareScore/ShareScore";
 
@@ -52,10 +53,5 @@ const gameDoneMessages = [
   "Wow! Why not try again and see if you can do even better this time?",
   "Fantastic! Do it again and challenge yourself for the next level of excellence?",
 ];
-
-function getElapsedSeconds(elapsedTime) {
-  const elapsedSeconds = elapsedTime / 1000;
-  return elapsedSeconds.toFixed(2);
-}
 
 export default Score;

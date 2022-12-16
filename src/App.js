@@ -15,7 +15,7 @@ const BOX_COUNT = 25;
 const App = () => {
   const [page, setPage] = useState(pageNames.INTRODUCTION);
   const [elapsedTime, setElapsedTime] = useState(0);
-  const [highscore, setHighscore] = useState(null);
+  const [highscore, setHighscore] = useState(() => getPersistedHighscore());
   const [currentNumber, setCurrentNumber] = useState(0);
   const [randomNumbers, setRandomNumbers] = useState([]);
 
@@ -47,7 +47,9 @@ const App = () => {
 
   return (
     <div className="App">
-      {page === pageNames.INTRODUCTION && <Introduction startGame={startGame} />}
+      {page === pageNames.INTRODUCTION && (
+        <Introduction startGame={startGame} highscore={highscore} />
+      )}
 
       {page === pageNames.GAME && (
         <Game
