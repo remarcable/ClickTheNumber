@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+// PropTypes import removed
 import random from "just-random";
 import classnames from "classnames";
 
@@ -7,19 +7,26 @@ import { getElapsedSeconds } from "../lib/getElapsedSeconds";
 import Button from "../components/Button/Button";
 import ShareScore from "../components/ShareScore/ShareScore";
 
-const propTypes = {
-  restartGame: PropTypes.func.isRequired,
-  elapsedTime: PropTypes.number.isRequired,
-  highscore: PropTypes.number,
-};
+// propTypes definition removed
 
+/**
+ * @typedef {Object} ScoreProps
+ * @property {() => void} restartGame - Function to restart the game.
+ * @property {number} elapsedTime - The time taken to complete the game.
+ * @property {number | null} highscore - The current highscore.
+ */
+
+/**
+ * Score component displays the player's score and highscore.
+ * @param {ScoreProps} props - The props for the Score component.
+ */
 const Score = ({ restartGame, elapsedTime, highscore }) => {
   return (
     <main className="text-button-group">
       <h1 className="title">
         Your Time:{" "}
         <span
-          className={classnames({ isNewHighscore: highscore === null || elapsedTime < highscore })}
+          className={classnames({ "is-new-highscore": highscore === null || elapsedTime < highscore })}
         >
           {getElapsedSeconds(elapsedTime)}s
         </span>
@@ -30,7 +37,7 @@ const Score = ({ restartGame, elapsedTime, highscore }) => {
         </h2>
       )}
       <h2 className="subtitle game-message">{random(gameDoneMessages)}</h2>
-      <ShareScore highscore={getElapsedSeconds(highscore)} />
+      <ShareScore highscore={getElapsedSeconds(highscore === null || elapsedTime < highscore ? elapsedTime : highscore)} />
       <Button onClick={restartGame}>Try Again</Button>
       <h2 className="subtitle small">
         Check out{" "}
@@ -43,7 +50,8 @@ const Score = ({ restartGame, elapsedTime, highscore }) => {
   );
 };
 
-Score.propTypes = propTypes;
+// PropTypes assignment removed
+// Score.propTypes = propTypes;
 
 const gameDoneMessages = [
   "Great job! Why not try again and see if you can beat your own score?",

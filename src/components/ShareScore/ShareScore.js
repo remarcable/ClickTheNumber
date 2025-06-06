@@ -1,3 +1,4 @@
+import React from "react";
 import {
   EmailShareButton,
   FacebookShareButton,
@@ -11,6 +12,15 @@ import {
 
 import "./ShareScore.css";
 
+/**
+ * @typedef {Object} ShareScoreProps
+ * @property {number} highscore - The highscore to be shared.
+ */
+
+/**
+ * A component for sharing the game score on social media.
+ * @param {ShareScoreProps} props - The props for the ShareScore component.
+ */
 const ShareScore = ({ highscore }) => {
   const shareButtonProps = {
     url: "https://projects.marcnitzsche.de/ClickTheNumber/",

@@ -1,19 +1,22 @@
 import React from "react";
-import PropTypes from "prop-types";
-
 import "./Button.css";
 
-const propTypes = {
-  onClick: PropTypes.func,
-  children: PropTypes.node,
+/**
+ * @typedef {Object} ButtonProps
+ * @property {() => void} onClick - Function to call when the button is clicked.
+ * @property {React.ReactNode} children - The content to display inside the button.
+ */
+
+/**
+ * A simple button component.
+ * @param {ButtonProps} props - The props for the Button component.
+ */
+const Button = ({ children, onClick }) => {
+  return (
+    <button type="button" className="btn" onClick={onClick}>
+      {children}
+    </button>
+  );
 };
-
-const Button = ({ children, onClick }) => (
-  <button type="button" className="btn" onClick={onClick}>
-    {children}
-  </button>
-);
-
-Button.propTypes = propTypes;
 
 export default Button;
